@@ -261,7 +261,7 @@ Color lightGrey = Color(0xffe8e8ea);
                                 topRight: Radius.circular(50.0),
                               ),
                               shape: BoxShape.rectangle,
-                              color: babyPink,
+                              color: Colors.black,
                             ),
                       
                       child: Center(
@@ -279,52 +279,56 @@ Color lightGrey = Color(0xffe8e8ea);
                         height: 50.0,
                         
                       ),
-                      Container(
-                        color: cream,
-                        width: 700.0,
-                        height: 200.0,
-                                            child: Column(
-                                              children: <Widget>[
-                                                Padding(
-                          padding: EdgeInsets.fromLTRB(15.0, 8.0, 5.0, 5.0),
-                          child: Text('Offer Price',
-                          style: GoogleFonts.openSans(
-                                      color: Colors.black,
-                                      fontSize: 20,
-                                    ),
-                          ),
-                        ),
-                        SizedBox(
-                          width: 20.0,
-                        ),
-
-                        Container(
-                        width: 300.0,
-                        height: 100.0,
-                        color: Colors.black26,
-                        child: Column(
-                          children:<Widget>[
-                                              Center(
-                            child: Text(
-                              widget.offer.couponCoins.toString(),
-                              style: GoogleFonts.openSans(
-                                      color: Colors.white,
-                                      fontSize: 50,
-                                    ),
+                      Padding(
+                        padding: EdgeInsets.all(5.0),
+                                              child: Container(
+                          color: Colors.black54,
+                          width: 700.0,
+                          height: 200.0,
+                                              child: Column(
+                                                children: <Widget>[
+                                                  Padding(
+                            padding: EdgeInsets.fromLTRB(15.0, 8.0, 5.0, 5.0),
+                            child: Text('Offer Price',
+                            style: GoogleFonts.openSans(
+                                        color: Colors.white,
+                                        fontSize: 20,
+                                      ),
                             ),
                           ),
-                          Text(
-                            'SSG Coins',
-                            style: GoogleFonts.openSans(
-                                    color: Colors.white,
-                                    fontSize: 10,
-                                  ),
-                          )
-                                            ],
-                        ),
-                        ),
+                          SizedBox(
+                            width: 20.0,
+                            height: 10.0,
+                          ),
+
+                          Container(
+                          width: 300.0,
+                          height: 100.0,
+                          color: Colors.black26,
+                          child: Column(
+                            children:<Widget>[
+                                                Center(
+                              child: Text(
+                                widget.offer.couponCoins.toString(),
+                                style: GoogleFonts.openSans(
+                                        color: Colors.white,
+                                        fontSize: 50,
+                                      ),
+                              ),
+                            ),
+                            Text(
+                              'SSG Coins',
+                              style: GoogleFonts.openSans(
+                                      color: Colors.white,
+                                      fontSize: 10,
+                                    ),
+                            )
                                               ],
-                                            )
+                          ),
+                          ),
+                                                ],
+                                              )
+                        ),
                       ),
                       
                         SizedBox(
@@ -332,71 +336,60 @@ Color lightGrey = Color(0xffe8e8ea);
                         ),
                         Container(
                           color: Colors.white,
-                          height: 300.0,
-                          child: Padding(
-                            padding: EdgeInsets.all(0.0),
+                          height: 250.0,
                           child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
-                              Padding(
-                                padding: EdgeInsets.all(0),
-                                                        child: Text(
-                                  'Please note:',
-                                  textAlign: TextAlign.left,
-                                  style: GoogleFonts.openSans(
-                                      color: Colors.black,
-                                      fontSize: 20,
-                                 ),
-                                ),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.all(2.0),
-                                                            child: Text(
-                                    '1) Offer once redeemed, can not be refunded.\\nBe careful before pressing that \'buy now\' button',
+                              Center(
+                                                              child: Text(
+                                    'Please note:',
                                     textAlign: TextAlign.left,
-                                    textDirection: TextDirection.ltr,
                                     style: GoogleFonts.openSans(
-                                          color: Colors.black,
-                                          
-                                          fontSize: 15,
-                                     ),
+                                        color: Colors.black,
+                                        fontSize: 20,
+                                   ),
                                   ),
                               ),
-                              SizedBox(
-                                height: 10.0,
+                              Padding(
+                                padding: EdgeInsets.fromLTRB(15, 5.0, 15, 5),
+                                                              child: Text(
+                                      '1) Offer once redeemed, can not be refunded.Be careful before pressing that \'buy now\' button',                                 
+                                      style: GoogleFonts.openSans(
+                                            color: Colors.black,
+                                            
+                                            fontSize: 15,
+                                       ),
+                                    ),
                               ),
                               Padding(
-                                padding: EdgeInsets.all(2.0),
-                                                            child: Text(
-                                    '2) Take 5 minute personalised quiz.',
-                                    textAlign: TextAlign.left,
-                                    textDirection: TextDirection.ltr,
-                                    style: GoogleFonts.openSans(
-                                          color: Colors.black,
-                                          fontSize: 15,
-                                     ),
-                                  ),
-                              ),
-                                SizedBox(
-                                height: 10.0,
+                                padding: EdgeInsets.fromLTRB(15, 5.0, 15, 5),
+                                                              child: Text(
+                                      '2) Take 5 minute personalised quiz.',
+                                      textAlign: TextAlign.left,
+                                      style: GoogleFonts.openSans(
+                                            color: Colors.black,
+                                            fontSize: 15,
+                                       ),
+                                    ),
                               ),
                               Padding(
-                                padding: EdgeInsets.all(2.0),
-                                                            child: Text(
-                                    '3) Order placed using these codes cannot be modified.',
-                                    textAlign: TextAlign.left,
-                                    
-                                    style: GoogleFonts.openSans(
-                                          color: Colors.black,
-                                          fontSize: 15,
-                                     ),
-                                  ),
+                                padding: EdgeInsets.fromLTRB(15, 5.0, 15, 5),
+                                                              child: Text(
+                                      '3) Order placed using these codes cannot be modified.',
+                                      textAlign: TextAlign.left,
+                                      
+                                      style: GoogleFonts.openSans(
+                                            color: Colors.black,
+                                            fontSize: 15,
+                                       ),
+                                    ),
                               ),
                                 SizedBox(
                                 height: 10.0,
                               ),
                               Padding(
                                 
-                                padding: EdgeInsets.all(2.0),
+                                padding: EdgeInsets.fromLTRB(15, 5.0, 15, 5),
                                                         child: Text(
                                   '4) This coupon code is valid only till $exp_date',
                                   textAlign: TextAlign.left,
@@ -407,7 +400,6 @@ Color lightGrey = Color(0xffe8e8ea);
                                 ),
                               ),
                             ],
-                          ),
                           ),
 
                         ),
@@ -451,7 +443,7 @@ Color lightGrey = Color(0xffe8e8ea);
                 Text(
                   'Accept Terms & Conditions',
                   style: GoogleFonts.openSans(
-                                      color: Colors.white24,
+                                      color: Colors.white,
                                       fontSize: 10,
                                       fontWeight: FontWeight.w600,
                                     ),

@@ -47,7 +47,7 @@ class Myapp extends StatelessWidget{
               onPressed: () => Navigator.pop(c,true),
             ),
             FlatButton(
-              child: Text('Np'),
+              child: Text('No'),
               onPressed: () => Navigator.pop(c,false),
             ),
           ],

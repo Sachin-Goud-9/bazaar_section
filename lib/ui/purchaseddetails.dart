@@ -92,132 +92,137 @@ class _PurchasedDetailsState extends State<PurchasedDetails> {
           ),
           body: Scrollbar(
             child: SingleChildScrollView(
-              child: Column(
-                          children: <Widget>[
-                            Container(
-                  
-                  width: 750,
-                  height: 100.0,
-                  child: Column(
-                  children: <Widget>[
-                    Text(
-                      'Coupon Code',
-                      style: GoogleFonts.openSans(
-                                      color: babyPink,
-                                      fontSize: 40,
-                                      fontWeight: FontWeight.w600,
-                                    ),
-                    ),
-                    Text(
-                      widget.offer.coupon.coupon,
-                      style: GoogleFonts.openSans(
-                                      color: Colors.cyan,
-                                      fontSize: 30,
-                                      fontWeight: FontWeight.w600,
-                                    ),
-                    ),
-                  ],
-                  ),
-                ),
-                SizedBox(height: 20.0,),
-                Padding(
-                  padding:EdgeInsets.all(5.0),
-                                  child: Row(
-                    children: <Widget>[
-                      Container(
-                    decoration: BoxDecoration(
-                      borderRadius: new BorderRadius.circular(10.0),
-                      
-                      color: cream,
-                    ),
-                    width: 180,
+              child: Padding(
+                padding: EdgeInsets.fromLTRB(0.0, 20.0, 0.0, 0.0),
+                              child: Column(
+                            children: <Widget>[
+                              Container(
+                    
+                    width: 750,
                     height: 100.0,
                     child: Column(
                     children: <Widget>[
                       Text(
-                        widget.offer.couponCoins.toString(),
+                        'Coupon Code',
                         style: GoogleFonts.openSans(
-                                        color: Colors.lightBlue,
+                                        color: babyPink,
                                         fontSize: 40,
                                         fontWeight: FontWeight.w600,
                                       ),
                       ),
                       Text(
-                        'Coins Spent',
+                        widget.offer.coupon.coupon,
                         style: GoogleFonts.openSans(
-                                        color: Colors.blue,
-                                        fontSize: 20,
+                                        color: Colors.cyan,
+                                        fontSize: 30,
                                         fontWeight: FontWeight.w600,
                                       ),
                       ),
                     ],
                     ),
                   ),
-                  SizedBox(
-                    width: 20,
-                  ),
-                  Container(
-                    
-                    width: 180,
-                    height: 100.0,
-                    decoration: BoxDecoration(
-                      borderRadius: new BorderRadius.circular(10.0),
-
-                      color: cream,
-                      /*shape: *RoundedRectangleBorder(
-                             
-                             borderRadius: BorderRadius.circular(5),
-                             side: BorderSide(
-                               color: Colors.green
-                             )
-                             ),*/
-                      
-                    ),
-                    
-                    child: Column(
+                  SizedBox(height: 20.0,),
+                  Padding(
+                    padding:EdgeInsets.all(5.0),
+                                    child: Row(
                       children: <Widget>[
-                        SizedBox(height: 17.0,),
+                        Container(
+                      decoration: BoxDecoration(
+                        borderRadius: new BorderRadius.circular(10.0),
+                        
+                        color: Colors.black,
+                      ),
+                      width: 180,
+                      height: 100.0,
+                      child: Column(
+                      children: <Widget>[
                         Text(
-                            getCurrentDate(),
-                            style: GoogleFonts.openSans(
-                      color: Colors.blue,
-                      fontSize: 20,
-                      fontWeight: FontWeight.w600,
-                    ),
-                          ),
-                        Text(
-                            'Purchase Date',
-                            style: GoogleFonts.openSans(
-                          color: Colors.blue,
-                          fontSize: 20,
-                          fontWeight: FontWeight.w600,
+                          widget.offer.couponCoins.toString(),
+                          style: GoogleFonts.openSans(
+                                          color: Colors.blue,
+                                          fontSize: 40,
+                                          fontWeight: FontWeight.w600,
+                                        ),
                         ),
-                          ),
+                        Text(
+                          'Coins Spent',
+                          style: GoogleFonts.openSans(
+                                          color: Colors.blue,
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.w600,
+                                        ),
+                        ),
                       ],
                       ),
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Container(
+                      
+                      width: 180,
+                      height: 100.0,
+                      decoration: BoxDecoration(
+                        borderRadius: new BorderRadius.circular(10.0),
+
+                        color: Colors.black,
+                        /*shape: *RoundedRectangleBorder(
+                               
+                               borderRadius: BorderRadius.circular(5),
+                               side: BorderSide(
+                                 color: Colors.green
+                               )
+                               ),*/
+                        
+                      ),
+                      
+                      child: Column(
+                        children: <Widget>[
+                          SizedBox(height: 17.0,),
+                          Text(
+                              getCurrentDate(),
+                              style: GoogleFonts.openSans(
+                        color: Colors.blue,
+                        fontSize: 20,
+                        fontWeight: FontWeight.w600,
+                      ),
+                            ),
+                          Text(
+                              'Purchase Date',
+                              style: GoogleFonts.openSans(
+                            color: Colors.blue,
+                            fontSize: 20,
+                            fontWeight: FontWeight.w600,
+                          ),
+                            ),
+                        ],
+                        ),
+                    ),
+                      ],
+                    ),
                   ),
-                    ],
-                  ),
-                ),
-                SizedBox(width: 10.0,),
-                Divider(),
-                Text(
-                  'Instructions',
-                  style: GoogleFonts.openSans(
-                                      color: Colors.black45,
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.w600,
-                                    ),
-                  ),
+                
+                  Divider(
+                    color: Colors.black54,
+                    thickness: 2.0,),
                   Text(
-                    widget.offer.coupon.instructions,
+                    'Instructions',
                     style: GoogleFonts.openSans(
-                                      color: Colors.black87,
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.w600,
-                                    ),
-                  )
-                ],
+                                        color: Colors.black45,
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.w600,
+                                      ),
+                    ),
+                    Text(
+                      widget.offer.coupon.instructions,
+                      style: GoogleFonts.openSans(
+                                        color: Colors.black87,
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.w600,
+                                      ),
+                    )
+                  ],
+                ),
               ),
             ),
           ),

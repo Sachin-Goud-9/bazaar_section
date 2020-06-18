@@ -27,7 +27,7 @@ class _HomePageState extends State<HomePage> {
               onPressed: () => Navigator.pop(c,true),
             ),
             FlatButton(
-              child: Text('Np'),
+              child: Text('No'),
               onPressed: () => Navigator.pop(c,false),
             ),
           ],

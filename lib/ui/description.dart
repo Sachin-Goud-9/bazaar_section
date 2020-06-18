@@ -219,11 +219,11 @@ class _DescriptionState extends State<Description> with SingleTickerProviderStat
                   ),
                 ),
                 FadeAnimation(1, Padding(
-                    padding: const EdgeInsets.all(15.0),
+                    padding: const EdgeInsets.all(14.0),
                     child: Text(widget.offer.coupon.description,
                       style: GoogleFonts.openSans(
                                 color: Colors.black,
-                                fontSize: 20,
+                                fontSize: 14,
                                 //fontWeight: FontWeight.w600,
                               ),
                       textAlign: TextAlign.justify,
@@ -264,7 +264,7 @@ class _DescriptionState extends State<Description> with SingleTickerProviderStat
                             ),
                             new IconButton(
                     onPressed: () {
-
+                        navigateToInstructionsandTerms(context,widget.offer,0);
                     },
                     icon:new Icon(Icons.arrow_forward_ios, color: Colors.white,),
               ),
@@ -331,7 +331,7 @@ class _DescriptionState extends State<Description> with SingleTickerProviderStat
                     
                       style: GoogleFonts.openSans(
                                 color: Colors.black,
-                                fontSize: 20,
+                                fontSize: 14,
                                 //fontWeight: FontWeight.w600,
                               ),
                       textAlign: TextAlign.justify,
@@ -428,19 +428,17 @@ class _DescriptionState extends State<Description> with SingleTickerProviderStat
                             
                             SizedBox(width: 100.0,),
                             Container(
+                              width: 105.0,
                               child: FlatButton(
-                                color:Colors.white,
+                                color:Colors.grey,
                            shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(5),
-                              side: BorderSide(
-                                color: Colors.green
-                             ),
                              ),  
                                 onPressed: (){_launchBrowser(widget.offer.store.website);},
                                 child: Padding(padding: EdgeInsets.all(2.0),
                                 child: Text('View More',
                                 style: GoogleFonts.openSans(
-                                color: Colors.green,
+                                color: Colors.white,
                                 fontSize: 13,
                                 fontWeight: FontWeight.w600,
                               ),
@@ -520,48 +518,44 @@ class _DescriptionState extends State<Description> with SingleTickerProviderStat
                         height: 75.0,
                         child: Row(
                           children: <Widget>[
-                            Column(
-                              children:<Widget>[
-                                Text(
-                              'Purchase Now!',
-                              style: GoogleFonts.openSans(
+                            Padding(
+                              padding: EdgeInsets.fromLTRB(10.0, 10.0, 0.0, 2.0),
+                                                        child: Column(
+                                                          children:<Widget>[Text(
+                                'Purchase Now!',
+                                style: GoogleFonts.openSans(
                                 color: Colors.white,
                                 fontSize: 20,
                                 //fontWeight: FontWeight.w600,
                               ),
-                            ),
-                            Text(
+                              ),
+                              Text(
                               'More About ',
                               style: GoogleFonts.openSans(
-                              color: Colors.white60,
-                              fontSize: 13,
+                              color: Colors.white,
+                              fontSize: 15,
                               //fontWeight: FontWeight.w600,
                             ),
                             ),
                               ],
+                              ),
                             ),
-                            SizedBox(width: 100.0,),
+                            
+                            SizedBox(width: 85.0,),
                             Container(
-                              width:100.0,
+                              width: 105.0,
                               child: FlatButton(
-                                                   color:Colors.white,
-                           
+                                color:Colors.blue,
                            shape: RoundedRectangleBorder(
-                             
-                             borderRadius: BorderRadius.circular(5),
-                             side: BorderSide(
-                               color: Colors.green
-                             )
-                             ),
-                                onPressed: (){
-                                  _launchBrowser(widget.offer.store.website);
-                                },
+                                borderRadius: BorderRadius.circular(5),
+                             ),  
+                                onPressed: (){_launchBrowser(widget.offer.store.website);},
                                 child: Padding(padding: EdgeInsets.all(2.0),
                                 child: Text('Let\'s Go',
                                 style: GoogleFonts.openSans(
-                                color: Colors.green,
+                                color: Colors.white,
                                 fontSize: 13,
-                                //fontWeight: FontWeight.w600,
+                                fontWeight: FontWeight.w600,
                               ),
                                 ),
                                 ),
