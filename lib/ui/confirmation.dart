@@ -51,7 +51,7 @@ Color lightGrey = Color(0xffe8e8ea);
           //content: SingleChildScrollView(
             //child: ListBody(
               //            children: <Widget>[
-                            Column(
+                            FadeAnimation(2, Column(
           mainAxisAlignment: MainAxisAlignment.end,
           children: <Widget>[
             Container(
@@ -106,21 +106,21 @@ Color lightGrey = Color(0xffe8e8ea);
                         color:Colors.white,
                            
                            shape: RoundedRectangleBorder(
-                             
-                             borderRadius: BorderRadius.circular(5),
-                             side: BorderSide(
-                               color: Colors.green
-                             )
-                             ),
+                               
+                               borderRadius: BorderRadius.circular(5),
+                               side: BorderSide(
+                                 color: Colors.green
+                               )
+                               ),
                         onPressed: () {
                           Navigator.of(context).pop();
                         },
                         child: Text('Cancel',
                         style: GoogleFonts.openSans(
-                                    color: Colors.green,
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.w600,
-                                  ),
+                                      color: Colors.green,
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.w600,
+                                    ),
                           ),
                       ),
                       SizedBox(
@@ -136,33 +136,33 @@ Color lightGrey = Color(0xffe8e8ea);
                         child: buildButtonChild(),
                         onHighlightChanged: (isPressed){
                           setState(() {
-                            _isPressed = isPressed;
-                            if(_state == 0){
-                              animateButton();
-                            }
+                              _isPressed = isPressed;
+                              if(_state == 0){
+                                animateButton();
+                              }
                           });
                         },*/
                         color:Colors.white,
                            
                            shape: RoundedRectangleBorder(
-                             
-                             borderRadius: BorderRadius.circular(5),
-                             side: BorderSide(
-                               color: Colors.green
-                             )
-                             ),
+                               
+                               borderRadius: BorderRadius.circular(5),
+                               side: BorderSide(
+                                 color: Colors.green
+                               )
+                               ),
                         child: Text('Confirm',
                         style: GoogleFonts.openSans(
-                                    color: Colors.green,
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.w600,
-                                  ),
+                                      color: Colors.green,
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.w600,
+                                    ),
                         ),
                         onPressed: (){
                           /*setState(() {
-                            if(_state == 0){
-                              animateButton();
-                            }
+                              if(_state == 0){
+                                animateButton();
+                              }
                           });*/
                           print('object');
                           navigateToFinalPage(context,widget.offer);
@@ -180,7 +180,8 @@ Color lightGrey = Color(0xffe8e8ea);
             
                 )
           ]
-                           );
+                           ),
+                            );
       }
                 );
       
